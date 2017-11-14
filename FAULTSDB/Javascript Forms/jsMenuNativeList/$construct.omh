@@ -1,0 +1,11 @@
+;  Enter your initialization code here
+
+Calculate iRow as pRow
+
+Do iMainList.$define(iSubList,iMainText)
+Do iSubList.$define(iTextCol1,iTextCol2,iAccessoryType,iAccessoryContent,iAccessoryValueCol,iImagePath,iFormName)
+Do iSubList.$add('MyCustomers Entry','Master Detail',kJSNativeListAccessoryTypeDisclosure,'',0,iconurl(12390),'jsMyCustomersForm')
+Do iSubList.$add('MyFaults Entry','Master Detail',kJSNativeListAccessoryTypeDisclosure,'',0,iconurl(12390),'jsMyFaultsForm')
+Do iSubList.$add('Customer and Fault Entry','Parent Child',kJSNativeListAccessoryTypeDisclosure,'',0,iconurl(12391),'jsMyCustomerFaultsForm')
+
+Do iMainList.$add(iSubList,'Forms')

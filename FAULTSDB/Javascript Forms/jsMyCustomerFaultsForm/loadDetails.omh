@@ -1,0 +1,5 @@
+Do iSqlRow.$assignrow(iSqlList)
+Calculate iOldRow as iSqlRow
+
+Do method fetchChildren
+Do method enableButtons

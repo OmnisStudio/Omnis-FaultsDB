@@ -1,0 +1,5 @@
+Begin text block
+Text: {WHERE  Fault_Ref LIKE '%[iSearchText]%' OR Fault_Title LIKE '%[iSearchText]%' OR Fault_Status LIKE '%[iSearchText]%' OR Fault_Date LIKE '%[iSearchText]%' OR Fault_Details LIKE '%[iSearchText]%' OR Fault_Comments LIKE '%[iSearchText]%' OR Fault_CustRef LIKE '%[iSearchText]%'}
+End text block
+Get text block lWhereClause
+Do method fetchData (lWhereClause)

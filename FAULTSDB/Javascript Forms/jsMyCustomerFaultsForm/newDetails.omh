@@ -1,0 +1,9 @@
+Calculate iMode as cInsertMode     ;; insert mode
+
+Do iSqlRow.$clear()
+
+Do iChildList.$clear()
+Do iChildList.$smartlist.$assign(kTrue)
+
+Do method enableButtons
+Do $cinst.$objs.MainPane.$currentpage.$assign(2)

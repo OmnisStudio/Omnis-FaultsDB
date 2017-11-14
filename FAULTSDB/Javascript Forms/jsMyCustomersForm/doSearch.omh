@@ -1,0 +1,5 @@
+Begin text block
+Text: {WHERE  Cust_Ref LIKE '%[iSearchText]%' OR Cust_Company LIKE '%[iSearchText]%' OR Cust_Name LIKE '%[iSearchText]%' OR Cust_Email LIKE '%[iSearchText]%' OR Cust_Telephone LIKE '%[iSearchText]%'}
+End text block
+Get text block lWhereClause
+Do method fetchData (lWhereClause)

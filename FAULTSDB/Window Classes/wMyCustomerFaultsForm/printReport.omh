@@ -1,0 +1,1 @@
+Do $reports.rMyCustomerFaultsForm.$open('*',iSqlRow,iChildList)

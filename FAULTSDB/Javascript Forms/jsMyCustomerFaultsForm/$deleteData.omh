@@ -1,0 +1,19 @@
+Set reference lStatRef to iSqlRow.$statementobject
+
+Do iSqlRow.$delete() Returns lFlag     ;; delete the parent
+If lFlag
+	Do iSqlList.$remove(iSqlList.$line)
+	
+	;  delete the children in the smartlist
+	Do iChildList.$first(kTrue,kFalse) Returns lLineRef
+	While lLineRef
+		Do iChildList.$remove(1)
+		Do iChildList.$first(kTrue,kFalse) Returns lLineRef
+	End While
+	Do iChildList.$dodeletes() Returns #F     ;; commit smartlist changes to server
+	
+	Do $cinst.$objs.MainPane.$currentpage.$assign(1)
+	Do method enableButtons
+Else
+	Do method showLastError (lStatRef)
+End If

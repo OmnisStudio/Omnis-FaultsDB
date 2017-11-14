@@ -1,0 +1,10 @@
+Do iSqlList.$definefromsqlclass('sMyCustomers','Cust_Ref','Cust_Company','Cust_Name','Cust_Email','Cust_Telephone')
+Do iSqlList.$sessionobject.$assign($sessions.FAULTSDBSESSION.$sessionobject) Returns #F
+
+Do iSqlRow.$definefromsqlclass('sMyCustomers','Cust_Ref','Cust_Company','Cust_Name','Cust_Email','Cust_Telephone')
+Do iSqlRow.$sessionobject.$assign($sessions.FAULTSDBSESSION.$sessionobject) Returns #F
+
+Do iChildList.$definefromsqlclass('sMyFaults','Fault_Ref','Fault_Title','Fault_Status','Fault_Date','Fault_Details','Fault_Comments','Fault_CustRef')
+Do iChildList.$sessionobject.$assign($sessions.FAULTSDBSESSION.$sessionobject) Returns #F
+
+Do method fetchData ('')

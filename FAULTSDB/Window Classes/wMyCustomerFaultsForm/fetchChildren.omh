@@ -1,0 +1,9 @@
+Set reference lStatRef to iChildList.$statementobject
+
+Do iChildList.$select(con('WHERE Fault_CustRef =',chr(39),iSqlList.Cust_Ref,chr(39))) Returns lFlag
+If lFlag
+	Do iChildList.$fetch(kFetchAll)
+	Do iChildList.$smartlist.$assign(kTrue)
+Else
+	Do method showLastError (lStatRef)
+End If
